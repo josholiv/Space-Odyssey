@@ -1,0 +1,424 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Color palette */
+.theme-dark {
+	--background-primary: #191919;
+	--background-secondary: #272727;
+	--background-modifier-border: #454545;
+	--text-normal: #a0a0a0;
+	--text-muted: #7e7e7e;
+	--text-faint: #616161;
+	--text-on-accent: #f3f3f3;
+	--interactive-accent: #48a4ff;
+	--interactive-accent-hover: #a1d0ff;
+	--text-accent: #48a4ff;
+	--text-accent-hover: #bcdeff;
+	--link-color: #48a4ff;
+	--link-color-hover: #bcdeff;
+	--link-external-color: #c184ff;
+	--link-external-color-hover: #dfbfff;
+	--code-background: #101010;
+	--code-normal: #a0a0a0;
+	--header-color: #f3f3f3;
+}
+
+.theme-light {
+	--background-primary: #f3f3f3;
+	--background-secondary: #e7e7e7;
+	--background-modifier-border: #cbcbcb;
+	--text-normal: #616161;
+	--text-muted: #7e7e7e;
+	--text-faint: #a0a0a0;
+	--text-on-accent: #101010;
+	--interactive-accent: #2b81d6;
+	--interactive-accent-hover: #184776;
+	--text-accent: #2b81d6;
+	--text-accent-hover: #184776;
+	--link-color: #2b81d6;
+	--link-color-hover: #184776;
+	--link-external-color: #852cdd;
+	--link-external-color-hover: #60209f;
+	--code-background: #dadada;
+	--code-normal: #454545;
+	--header-color: #101010;
+}
+
+body {
+	--radius-s: 0px;
+	--radius-m: 0px;
+	--radius-l: 0px;
+	--input-radius: 0px;
+	--tab-radius-active: 0px;
+	--checkbox-radius: 0px;
+	--toggle-radius: 0px;
+	--toggle-thumb-radius: 0px;
+	--slider-thumb-radius: 0px;
+
+	/* HR customization */
+	--hr-color: var(--background-modifier-border);
+	--hr-thickness: 2px;
+
+	/* Fonts */
+	--font-text: "Noto Sans", sans-serif;
+	--font-interface: "Noto Sans", sans-serif;
+	--font-monospace: "Atkinson Hyperlegible", monospace;
+}
+
+/* ─── Headers ─── */
+
+.markdown-rendered h1,
+.markdown-preview-view h1,
+.cm-header-1,
+.HyperMD-header-1,
+.markdown-source-view.mod-cm6 .cm-line .cm-header-1 {
+	font-family: "DM Serif Text", serif !important;
+	font-size: 3rem !important;
+	font-weight: 400 !important;
+	color: var(--header-color);
+}
+
+.markdown-rendered h2,
+.markdown-preview-view h2,
+.cm-header-2,
+.HyperMD-header-2,
+.markdown-source-view.mod-cm6 .cm-line .cm-header-2 {
+	font-family: "DM Serif Text", serif !important;
+	font-size: 2rem !important;
+	font-weight: 200 !important;
+	color: var(--header-color);
+}
+
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6,
+.cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6,
+.HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6 {
+	font-family: "Noto Sans", sans-serif !important;
+	color: var(--header-color) !important;
+	font-style: normal;
+}
+
+/* H3 and H5 are italic */
+.markdown-rendered h3,
+.markdown-rendered h5,
+.markdown-preview-view h3,
+.markdown-preview-view h5,
+.cm-header-3, .cm-header-5,
+.HyperMD-header-3, .HyperMD-header-5 {
+	font-style: italic;
+}
+
+/* Faint header hashtags */
+.cm-formatting-header,
+.HyperMD-header .cm-formatting-header {
+	color: var(--text-faint) !important;
+}
+
+/* ─── Inline code ─── */
+
+code,
+.markdown-preview-view code:not(pre code) {
+	font-family: "Atkinson Hyperlegible Mono", monospace !important;
+	background-color: var(--code-background) !important;
+	color: var(--code-normal) !important;
+	padding: 0.2rem 0.35rem !important;
+	border-radius: 2px !important;
+	font-size: 0.9rem !important;
+	border: 1px solid var(--background-modifier-border) !important;
+}
+
+.cm-inline-code {
+	background-color: var(--code-background) !important;
+	color: var(--code-normal) !important;
+	border: 1px solid var(--background-modifier-border) !important;
+	border-radius: 2px !important;
+}
+
+.cm-formatting.cm-formatting-code {
+	border: none !important;
+	background-color: transparent !important;
+	padding: 0 !important;
+}
+
+/* ─── Code blocks ─── */
+
+pre,
+.cm-s-obsidian pre.HyperMD-codeblock,
+.HyperMD-codeblock,
+.markdown-preview-view pre {
+	font-family: "Atkinson Hyperlegible Mono", monospace !important;
+	background-color: var(--code-background) !important;
+	padding: 0.5rem 3rem 0.5rem 0.2rem !important;
+	border-radius: 2px !important;
+	border: 1px solid var(--background-modifier-border) !important;
+	overflow: visible !important;
+	white-space: pre-wrap !important;
+	word-break: break-word !important;
+}
+
+pre code,
+.markdown-preview-view pre code {
+	background-color: transparent !important;
+	border: none !important;
+	color: var(--code-normal) !important;
+	font-size: 0.9rem !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-editor .cm-content .HyperMD-codeblock {
+	background-color: var(--code-background) !important;
+	line-height: 1.3 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+	background: transparent !important;
+	border: none !important;
+}
+
+/* ─── Blockquotes ─── */
+
+.markdown-preview-view blockquote,
+.markdown-rendered blockquote {
+	border-left: 4px solid var(--text-normal) !important;
+	background-color: var(--background-secondary) !important;
+	padding: 1rem !important;
+	margin: 1rem 0 !important;
+	color: var(--text-normal) !important;
+}
+
+/* ─── Callouts ─── */
+
+/* Base reset */
+.markdown-rendered .callout,
+.markdown-preview-view .callout {
+	border-radius: 0 !important;
+	border-left-width: 4px !important;
+	border-left-style: solid !important;
+	border-left-color: rgb(var(--callout-color)) !important;
+	padding: 1rem !important;
+	margin: 1rem 0 !important;
+}
+
+/* Background, remove tint — no !important so themed backgrounds can override */
+.callout {
+	--callout-blend-mode: normal;
+	background-color: var(--background-secondary);
+}
+
+/* Title row */
+.callout-title {
+	font-family: "Noto Sans", sans-serif !important;
+	font-weight: 700 !important;
+	font-size: 1rem !important;
+	margin-bottom: 0.5rem !important;
+	padding: 0 !important;
+	background-color: transparent !important;
+	gap: 0.5rem !important;
+	color: rgb(var(--callout-color)) !important;
+}
+
+/* Icon inherits title color */
+.callout-title-icon {
+	color: inherit !important;
+}
+
+/* Fold arrow inherits title color */
+.callout-fold {
+	color: inherit !important;
+}
+
+/* Body text */
+.callout-content {
+	color: var(--text-normal) !important;
+	padding: 0 !important;
+}
+
+/* ─── Per-type --callout-color overrides (RGB triplets) ─── */
+
+.callout[data-callout="note"] {
+	--callout-color: 193, 132, 255;    /* purple-400 */
+}
+.callout[data-callout="info"],
+.callout[data-callout="todo"] {
+	--callout-color: 72, 164, 255;     /* blue-400 */
+}
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="important"] {
+	--callout-color: 255, 107, 181;    /* pink-400 */
+}
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+	--callout-color: 46, 184, 46;      /* green-400 */
+}
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+	--callout-color: 230, 138, 0;      /* orange-400 */
+}
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"],
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"] {
+	--callout-color: 255, 116, 116;    /* red-400 */
+}
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"] {
+	--callout-color: 161, 208, 255;    /* blue-300 */
+}
+.callout[data-callout="example"] {
+	--callout-color: 223, 191, 255;    /* purple-300 */
+}
+.callout[data-callout="faq"],
+.callout[data-callout="question"],
+.callout[data-callout="help"] {
+	--callout-color: 255, 192, 98;     /* orange-300 */
+}
+
+/* Quote/cite use a theme-aware color since text-normal differs per theme */
+.theme-dark .callout[data-callout="quote"],
+.theme-dark .callout[data-callout="cite"] {
+	--callout-color: 160, 160, 160;    /* neutral-400 */
+}
+.theme-light .callout[data-callout="quote"],
+.theme-light .callout[data-callout="cite"] {
+	--callout-color: 97, 97, 97;       /* neutral-600 */
+}
+
+/* ─── Callout colored backgrounds ─── */
+
+/* Dark theme */
+.theme-dark .callout[data-callout="note"],
+.theme-dark .callout[data-callout="example"] {
+	background-color: #250c3d; /* purple-900 */
+}
+.theme-dark .callout[data-callout="info"],
+.theme-dark .callout[data-callout="todo"],
+.theme-dark .callout[data-callout="abstract"],
+.theme-dark .callout[data-callout="summary"],
+.theme-dark .callout[data-callout="tldr"] {
+	background-color: #091a2c; /* blue-900 */
+}
+.theme-dark .callout[data-callout="tip"],
+.theme-dark .callout[data-callout="hint"],
+.theme-dark .callout[data-callout="important"] {
+	background-color: #320a1e; /* pink-900 */
+}
+.theme-dark .callout[data-callout="success"],
+.theme-dark .callout[data-callout="check"],
+.theme-dark .callout[data-callout="done"] {
+	background-color: #081e08; /* green-900 */
+}
+.theme-dark .callout[data-callout="warning"],
+.theme-dark .callout[data-callout="caution"],
+.theme-dark .callout[data-callout="attention"],
+.theme-dark .callout[data-callout="faq"],
+.theme-dark .callout[data-callout="question"],
+.theme-dark .callout[data-callout="help"] {
+	background-color: #261700; /* orange-900 */
+}
+.theme-dark .callout[data-callout="danger"],
+.theme-dark .callout[data-callout="error"],
+.theme-dark .callout[data-callout="bug"],
+.theme-dark .callout[data-callout="failure"],
+.theme-dark .callout[data-callout="fail"],
+.theme-dark .callout[data-callout="missing"] {
+	background-color: #3d0000; /* red-900 */
+}
+
+/* Light theme */
+.theme-light .callout[data-callout="note"],
+.theme-light .callout[data-callout="example"] {
+	background-color: #f0e2ff; /* purple-100 */
+}
+.theme-light .callout[data-callout="info"],
+.theme-light .callout[data-callout="todo"],
+.theme-light .callout[data-callout="abstract"],
+.theme-light .callout[data-callout="summary"],
+.theme-light .callout[data-callout="tldr"] {
+	background-color: #d5eaff; /* blue-100 */
+}
+.theme-light .callout[data-callout="tip"],
+.theme-light .callout[data-callout="hint"],
+.theme-light .callout[data-callout="important"] {
+	background-color: #ffdfef; /* pink-100 */
+}
+.theme-light .callout[data-callout="success"],
+.theme-light .callout[data-callout="check"],
+.theme-light .callout[data-callout="done"] {
+	background-color: #c9f2c9; /* green-100 */
+}
+.theme-light .callout[data-callout="warning"],
+.theme-light .callout[data-callout="caution"],
+.theme-light .callout[data-callout="attention"],
+.theme-light .callout[data-callout="faq"],
+.theme-light .callout[data-callout="question"],
+.theme-light .callout[data-callout="help"] {
+	background-color: #ffe3ba; /* orange-100 */
+}
+.theme-light .callout[data-callout="danger"],
+.theme-light .callout[data-callout="error"],
+.theme-light .callout[data-callout="bug"],
+.theme-light .callout[data-callout="failure"],
+.theme-light .callout[data-callout="fail"],
+.theme-light .callout[data-callout="missing"] {
+	background-color: #ffe0e0; /* red-100 */
+}
+
+/* ─── Links ─── */
+
+a,
+.markdown-preview-view a,
+.cm-link,
+.cm-hmd-internal-link {
+	color: var(--link-color) !important;
+}
+
+a:hover,
+.markdown-preview-view a:hover {
+	color: var(--link-color-hover) !important;
+}
+
+/* ─── List markers ─── */
+
+.markdown-preview-view li::marker,
+.cm-formatting-list {
+	color: var(--text-faint) !important;
+}
+
+/* ─── UI tweaks ─── */
+
+.workspace-tab-header.is-active::before,
+.workspace-tab-header.is-active::after {
+	display: none;
+}
+
+svg * {
+	stroke-linecap: square;
+	stroke-linejoin: miter;
+	rx: 0;
+	ry: 0;
+}
+
+.menu {
+	padding: var(--size-2-1);
+}
+
+.menu-item {
+	padding: var(--size-4-1) var(--size-4-2);
+}
+
+.menu-separator {
+	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}
