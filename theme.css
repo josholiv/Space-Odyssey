@@ -130,6 +130,7 @@ code,
 }
 
 .cm-inline-code {
+	font-family: "Atkinson Hyperlegible Mono", monospace !important;
 	background-color: var(--code-background) !important;
 	color: var(--code-normal) !important;
 	border: 1px solid var(--background-modifier-border) !important;
@@ -238,11 +239,15 @@ pre code,
 
 /* ─── Per-type --callout-color overrides (RGB triplets) ─── */
 
-.callout[data-callout="note"] {
+.callout[data-callout="note"],
+.callout[data-callout="example"] {
 	--callout-color: 193, 132, 255;    /* purple-400 */
 }
 .callout[data-callout="info"],
-.callout[data-callout="todo"] {
+.callout[data-callout="todo"],
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"] {
 	--callout-color: 72, 164, 255;     /* blue-400 */
 }
 .callout[data-callout="tip"],
@@ -257,7 +262,10 @@ pre code,
 }
 .callout[data-callout="warning"],
 .callout[data-callout="caution"],
-.callout[data-callout="attention"] {
+.callout[data-callout="attention"],
+.callout[data-callout="faq"],
+.callout[data-callout="question"],
+.callout[data-callout="help"] {
 	--callout-color: 230, 138, 0;      /* orange-400 */
 }
 .callout[data-callout="danger"],
@@ -267,19 +275,6 @@ pre code,
 .callout[data-callout="fail"],
 .callout[data-callout="missing"] {
 	--callout-color: 255, 116, 116;    /* red-400 */
-}
-.callout[data-callout="abstract"],
-.callout[data-callout="summary"],
-.callout[data-callout="tldr"] {
-	--callout-color: 161, 208, 255;    /* blue-300 */
-}
-.callout[data-callout="example"] {
-	--callout-color: 223, 191, 255;    /* purple-300 */
-}
-.callout[data-callout="faq"],
-.callout[data-callout="question"],
-.callout[data-callout="help"] {
-	--callout-color: 255, 192, 98;     /* orange-300 */
 }
 
 /* Quote/cite use a theme-aware color since text-normal differs per theme */
