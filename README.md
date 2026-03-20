@@ -2,9 +2,11 @@
 
 A minimal, typographic Obsidian theme designed for focused writing and clean reading.
 
+![preview](https://github.com/user-attachments/assets/6d8371b5-5a18-456b-b885-eab90bf57aca)
+
 ## Features
 
-- **H1 and H2** use [DM Serif Text](https://fonts.google.com/specimen/DM+Serif+Text) for editorial weight; **H3–H6** use [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans), with H3 and H5 italicised by default
+- **H1 and H2** use [DM Serif Text](https://fonts.google.com/specimen/DM+Serif+Text), a serif font that gives headings a bold, book-like presence; **H3–H6** use [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans), with H3 and H5 italicised by default
 - **Body text** set in Noto Sans; **monospace** uses [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono)
 - Sharp, geometric UI, including minimal border radii across all elements
 - Inline code and code blocks styled with a dark background and subtle border in both light and dark mode
@@ -19,7 +21,7 @@ A minimal, typographic Obsidian theme designed for focused writing and clean rea
 
 ## Light & Dark Mode
 
-Both modes are fully supported and can be switched from **Settings → Appearance**.
+Both modes are fully supported and can be switched from **Settings → Appearance** in Obsidian.
 
 ## Fonts
 
