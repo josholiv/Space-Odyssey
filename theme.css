@@ -1,5 +1,89 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Atkinson+Hyperlegible+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* ─── Full color palette ─── */
+/* accessible color palette with consistent luminance generated with:
+https://perceptualpalettes.alexdunn.au/?c=green%2333cc33%2Corange%23ff9900%2Cblue%233399ff%2Cneutral%23000000%2Cpurple%239933ff%2Cred%23ff0000%2Cpink%23ff3399&l=90%2C80%2C70%2C60%2C35%2C21%2C12%2C6%2C2%2C1%2C0.5&n=false&i=true */
+
+:root {
+--green-050: #e6f9e6;
+--green-100: #c9f2c9;
+--green-200: #a9eaa9;
+--green-300: #84e084;
+--green-400: #2eb82e;
+--green-500: #249224;
+--green-600: #1c701c;
+--green-700: #145014;
+--green-800: #0b2d0b;
+--green-900: #081e08;
+--green-950: #051305;
+--orange-050: #fff2de;
+--orange-100: #ffe3ba;
+--orange-200: #ffd391;
+--orange-300: #ffc062;
+--orange-400: #e68a00;
+--orange-500: #b66d00;
+--orange-600: #8c5400;
+--orange-700: #643c00;
+--orange-800: #392200;
+--orange-900: #261700;
+--orange-950: #170e00;
+--blue-050: #ebf5ff;
+--blue-100: #d5eaff;
+--blue-200: #bcdeff;
+--blue-300: #a1d0ff;
+--blue-400: #48a4ff;
+--blue-500: #2b81d6;
+--blue-600: #2163a5;
+--blue-700: #184776;
+--blue-800: #0d2843;
+--blue-900: #091a2c;
+--blue-950: #05101b;
+--neutral-050: #f3f3f3;
+--neutral-100: #e7e7e7;
+--neutral-200: #dadada;
+--neutral-300: #cbcbcb;
+--neutral-400: #a0a0a0;
+--neutral-500: #7e7e7e;
+--neutral-600: #616161;
+--neutral-700: #454545;
+--neutral-800: #272727;
+--neutral-900: #191919;
+--neutral-950: #101010;
+--purple-050: #f8f1ff;
+--purple-100: #f0e2ff;
+--purple-200: #e8d1ff;
+--purple-300: #dfbfff;
+--purple-400: #c184ff;
+--purple-500: #a74fff;
+--purple-600: #852cdd;
+--purple-700: #60209f;
+--purple-800: #37125b;
+--purple-900: #250c3d;
+--purple-950: #170827;
+--red-050: #fff0f0;
+--red-100: #ffe0e0;
+--red-200: #ffcece;
+--red-300: #ffbaba;
+--red-400: #ff7474;
+--red-500: #fe0000;
+--red-600: #c60000;
+--red-700: #910000;
+--red-800: #560000;
+--red-900: #3d0000;
+--red-950: #2a0000;
+--pink-050: #ffeff7;
+--pink-100: #ffdfef;
+--pink-200: #ffcce5;
+--pink-300: #ffb6db;
+--pink-400: #ff6bb5;
+--pink-500: #e82e8b;
+--pink-600: #b4246c;
+--pink-700: #821a4e;
+--pink-800: #4a0f2d;
+--pink-900: #320a1e;
+--pink-950: #200613;
+}
 
 /* Color palette */
 .theme-dark {
@@ -19,25 +103,33 @@
 	--code-background: #101010;
 	--code-normal: #a0a0a0;
 	--header-color: #f3f3f3;
+	--btn-bg: #852cdd;        /* purple-600 */
+	--btn-bg-hover: #a74fff;  /* purple-500 */
+	--btn-border: #a0a0a0;    /* neutral-400 */
+	--btn-text: #e7e7e7;      /* neutral-100 */
 }
 
 .theme-light {
-	--background-primary: #f3f3f3;
-	--background-secondary: #e7e7e7;
-	--background-modifier-border: #cbcbcb;
-	--text-normal: #616161;
-	--text-muted: #7e7e7e;
-	--text-faint: #a0a0a0;
-	--text-on-accent: #101010;
-	--interactive-accent: #2b81d6;
-	--interactive-accent-hover: #184776;
+	--background-primary: #f3f3f3;    /* neutral-050 */
+	--background-secondary: #e7e7e7;  /* neutral-100 */
+	--background-modifier-border: #cbcbcb; /* neutral-300 */
+	--text-normal: #616161;           /* neutral-600 */
+	--text-muted: #7e7e7e;            /* neutral-500 */
+	--text-faint: #a0a0a0;            /* neutral-400 */
+	--text-on-accent: #101010;        /* neutral-950 */
+	--interactive-accent: #2b81d6;    /* blue-500 */
+	--interactive-accent-hover: #184776; /* blue-700 */
 	--text-accent: #2b81d6;
 	--text-accent-hover: #184776;
 	--link-color: #2b81d6;
 	--link-color-hover: #184776;
-	--code-background: #dadada;
-	--code-normal: #454545;
-	--header-color: #101010;
+	--code-background: #dadada;       /* neutral-200 */
+	--code-normal: #454545;           /* neutral-700 */
+	--header-color: #101010;          /* neutral-950 */
+	--btn-bg: #c184ff;        /* purple-400 */
+	--btn-bg-hover: #a74fff;  /* purple-500 */
+	--btn-border: #852cdd;    /* purple-600 */
+	--btn-text: #272727;      /* neutral-800 */
 }
 
 body {
@@ -58,7 +150,7 @@ body {
 	/* Fonts */
 	--font-text: "Noto Sans", sans-serif;
 	--font-interface: "Noto Sans", sans-serif;
-	--font-monospace: "Atkinson Hyperlegible", monospace;
+	--font-monospace: "Atkinson Hyperlegible Mono", monospace;
 }
 
 /* ─── Headers ─── */
@@ -96,17 +188,17 @@ body {
 .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6,
 .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6 {
 	font-family: "Noto Sans", sans-serif !important;
-	color: var(--header-color) !important;
+	color: var(--text-normal) !important;
 	font-style: normal;
 }
 
 /* H3 and H5 are italic */
-.markdown-rendered h3,
-.markdown-rendered h5,
-.markdown-preview-view h3,
-.markdown-preview-view h5,
-.cm-header-3, .cm-header-5,
-.HyperMD-header-3, .HyperMD-header-5 {
+.markdown-rendered h4,
+.markdown-rendered h6,
+.markdown-preview-view h4,
+.markdown-preview-view h6,
+.cm-header-4, .cm-header-6,
+.HyperMD-header-4, .HyperMD-header-6 {
 	font-style: italic;
 }
 
@@ -127,6 +219,7 @@ code,
 	border-radius: 2px !important;
 	font-size: 0.9rem !important;
 	border: 1px solid var(--background-modifier-border) !important;
+	border-radius: 5px !important;
 }
 
 .cm-inline-code {
@@ -152,7 +245,7 @@ pre,
 	font-family: "Atkinson Hyperlegible Mono", monospace !important;
 	background-color: var(--code-background) !important;
 	padding: 0.5rem 3rem 0.5rem 0.2rem !important;
-	border-radius: 2px !important;
+	border-radius: 5px !important;
 	border: 1px solid var(--background-modifier-border) !important;
 	overflow: visible !important;
 	white-space: pre-wrap !important;
@@ -185,8 +278,13 @@ pre code,
 .markdown-rendered blockquote {
 	border-left: 4px solid var(--text-normal) !important;
 	background-color: var(--background-secondary) !important;
-	padding: 1rem !important;
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+	padding-top: 0.6rem !important;
+	padding-bottom: 0.6rem !important;
 	margin: 1rem 0 !important;
+	margin-left: 0 !important;
+	border-radius: 10px !important;
 	color: var(--text-normal) !important;
 }
 
@@ -195,12 +293,16 @@ pre code,
 /* Base reset */
 .markdown-rendered .callout,
 .markdown-preview-view .callout {
-	border-radius: 0 !important;
+	border-radius: 10px !important;
 	border-left-width: 4px !important;
 	border-left-style: solid !important;
 	border-left-color: rgb(var(--callout-color)) !important;
-	padding: 1rem !important;
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+	padding-top: 0.6rem !important;
+	padding-bottom: 0.6rem !important;	margin: 1rem 0 !important;
 	margin: 1rem 0 !important;
+	margin-left: 0 !important;
 }
 
 /* Background, remove tint — no !important so themed backgrounds can override */
@@ -214,7 +316,6 @@ pre code,
 	font-family: "Noto Sans", sans-serif !important;
 	font-weight: 700 !important;
 	font-size: 1rem !important;
-	margin-bottom: 0.5rem !important;
 	padding: 0 !important;
 	background-color: transparent !important;
 	gap: 0.5rem !important;
@@ -235,6 +336,10 @@ pre code,
 .callout-content {
 	color: var(--text-normal) !important;
 	padding: 0 !important;
+}
+
+.callout-content > *:last-child {
+	margin-bottom: 0 !important;
 }
 
 /* ─── Per-type --callout-color overrides (RGB triplets) ─── */
