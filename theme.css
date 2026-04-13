@@ -276,12 +276,6 @@ pre code,
 }
 
 /* ─── Blockquotes ─── */
-/*
-  Website .blockquote uses border-left with --bg-secondary (same family as bg),
-  making it a very subtle structural indent — NOT a highlighted callout.
-  Contrast with callouts, which use vivid accent colors.
-  Obsidian blockquotes match this: neutral border, secondary background.
-*/
 
 .markdown-preview-view blockquote,
 .markdown-rendered blockquote {
