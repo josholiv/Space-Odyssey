@@ -87,49 +87,53 @@ https://perceptualpalettes.alexdunn.au/?c=green%2333cc33%2Corange%23ff9900%2Cblu
 
 /* Color palette */
 .theme-dark {
-	--background-primary: #191919;
-	--background-secondary: #272727;
-	--background-modifier-border: #454545;
-	--text-normal: #a0a0a0;
-	--text-muted: #7e7e7e;
-	--text-faint: #616161;
-	--text-on-accent: #f3f3f3;
-	--interactive-accent: #48a4ff;
-	--interactive-accent-hover: #a1d0ff;
+	--background-primary: #191919;       /* neutral-900 = --bg-primary dark */
+	--background-secondary: #272727;     /* neutral-800 = --bg-secondary dark */
+	--background-modifier-border: #454545; /* neutral-700 = --bg-border dark */
+	--text-normal: #a0a0a0;              /* neutral-400 */
+	--text-muted: #7e7e7e;               /* neutral-500 */
+	--text-faint: #616161;               /* neutral-600 */
+	--text-on-accent: #f3f3f3;           /* neutral-050 */
+	--interactive-accent: #48a4ff;       /* blue-400 */
+	--interactive-accent-hover: #a1d0ff; /* blue-300 */
 	--text-accent: #48a4ff;
 	--text-accent-hover: #bcdeff;
-	--link-color: #48a4ff;
-	--link-color-hover: #bcdeff;
-	--code-background: #101010;
-	--code-normal: #a0a0a0;
-	--header-color: #f3f3f3;
-	--btn-bg: #852cdd;        /* purple-600 */
-	--btn-bg-hover: #a74fff;  /* purple-500 */
-	--btn-border: #a0a0a0;    /* neutral-400 */
-	--btn-text: #e7e7e7;      /* neutral-100 */
+	--link-color: #48a4ff;               /* blue-400 */
+	--link-color-hover: #bcdeff;         /* blue-200 */
+	--code-background: #101010;          /* neutral-950 = --code-bg dark */
+	--code-normal: #a0a0a0;              /* neutral-400 = --code-text dark */
+	--header-color: #f3f3f3;             /* neutral-050 = --text-heading dark */
+	/* Buttons: transparent bg, purple text, bottom shadow — matches website .btn */
+	--btn-bg: transparent;
+	--btn-bg-hover: #272727;             /* neutral-800 */
+	--btn-text: #c184ff;                 /* purple-400 = --btn-text dark */
+	--btn-text-hover: #dfbfff;           /* purple-300 = --btn-text-hover dark */
+	--btn-border: #454545;               /* neutral-700 */
 }
 
 .theme-light {
-	--background-primary: #f3f3f3;    /* neutral-050 */
-	--background-secondary: #e7e7e7;  /* neutral-100 */
-	--background-modifier-border: #cbcbcb; /* neutral-300 */
-	--text-normal: #616161;           /* neutral-600 */
-	--text-muted: #7e7e7e;            /* neutral-500 */
-	--text-faint: #a0a0a0;            /* neutral-400 */
-	--text-on-accent: #101010;        /* neutral-950 */
-	--interactive-accent: #2b81d6;    /* blue-500 */
+	--background-primary: #f3f3f3;       /* neutral-050 = --bg-primary light */
+	--background-secondary: #e7e7e7;     /* neutral-100 = --bg-secondary light */
+	--background-modifier-border: #cbcbcb; /* neutral-300 = --bg-border light */
+	--text-normal: #616161;              /* neutral-600 */
+	--text-muted: #7e7e7e;               /* neutral-500 */
+	--text-faint: #a0a0a0;               /* neutral-400 */
+	--text-on-accent: #101010;           /* neutral-950 */
+	--interactive-accent: #2b81d6;       /* blue-500 */
 	--interactive-accent-hover: #184776; /* blue-700 */
 	--text-accent: #2b81d6;
 	--text-accent-hover: #184776;
-	--link-color: #2b81d6;
-	--link-color-hover: #184776;
-	--code-background: #dadada;       /* neutral-200 */
-	--code-normal: #454545;           /* neutral-700 */
-	--header-color: #101010;          /* neutral-950 */
-	--btn-bg: #c184ff;        /* purple-400 */
-	--btn-bg-hover: #a74fff;  /* purple-500 */
-	--btn-border: #852cdd;    /* purple-600 */
-	--btn-text: #272727;      /* neutral-800 */
+	--link-color: #2b81d6;               /* blue-500 */
+	--link-color-hover: #184776;         /* blue-700 */
+	--code-background: #dadada;          /* neutral-200 = --code-bg light */
+	--code-normal: #454545;              /* neutral-700 = --code-text light */
+	--header-color: #101010;             /* neutral-950 = --text-heading light */
+	/* Buttons: transparent bg, purple text, bottom shadow — matches website .btn */
+	--btn-bg: transparent;
+	--btn-bg-hover: #e7e7e7;             /* neutral-100 */
+	--btn-text: #852cdd;                 /* purple-600 = --btn-text light */
+	--btn-text-hover: #a74fff;           /* purple-500 = --btn-text-hover light */
+	--btn-border: #cbcbcb;               /* neutral-300 */
 }
 
 body {
@@ -192,7 +196,7 @@ body {
 	font-style: normal;
 }
 
-/* H3 and H5 are italic */
+/* H4 and H6 are italic */
 .markdown-rendered h4,
 .markdown-rendered h6,
 .markdown-preview-view h4,
@@ -215,11 +219,10 @@ code,
 	font-family: "Atkinson Hyperlegible Mono", monospace !important;
 	background-color: var(--code-background) !important;
 	color: var(--code-normal) !important;
-	padding: 0.2rem 0.35rem !important;
-	border-radius: 2px !important;
+	padding: 0rem 0.35rem !important;
+	border-radius: 5px !important;
 	font-size: 0.9rem !important;
 	border: 1px solid var(--background-modifier-border) !important;
-	border-radius: 5px !important;
 }
 
 .cm-inline-code {
@@ -227,7 +230,7 @@ code,
 	background-color: var(--code-background) !important;
 	color: var(--code-normal) !important;
 	border: 1px solid var(--background-modifier-border) !important;
-	border-radius: 2px !important;
+	border-radius: 5px !important;
 }
 
 .cm-formatting.cm-formatting-code {
@@ -273,18 +276,24 @@ pre code,
 }
 
 /* ─── Blockquotes ─── */
+/*
+  Website .blockquote uses border-left with --bg-secondary (same family as bg),
+  making it a very subtle structural indent — NOT a highlighted callout.
+  Contrast with callouts, which use vivid accent colors.
+  Obsidian blockquotes match this: neutral border, secondary background.
+*/
 
 .markdown-preview-view blockquote,
 .markdown-rendered blockquote {
-	border-left: 4px solid var(--text-normal) !important;
-	background-color: var(--background-secondary) !important;
-	padding-left: 1rem !important;
+	border-left: 4px solid var(--background-secondary) !important;  /* subtle same-family line, no background */
+	background-color: transparent !important;
+	padding-left: 0.6rem !important;
 	padding-right: 1rem !important;
-	padding-top: 0.6rem !important;
-	padding-bottom: 0.6rem !important;
+	padding-top: 0rem !important;
+	padding-bottom: 0rem !important;
 	margin: 1rem 0 !important;
-	margin-left: 0 !important;
-	border-radius: 10px !important;
+	margin-left: 1rem !important;                                    /* indented like website */
+	border-radius: 0px !important;
 	color: var(--text-normal) !important;
 }
 
@@ -300,12 +309,12 @@ pre code,
 	padding-left: 1rem !important;
 	padding-right: 1rem !important;
 	padding-top: 0.6rem !important;
-	padding-bottom: 0.6rem !important;	margin: 1rem 0 !important;
+	padding-bottom: 0.6rem !important;
 	margin: 1rem 0 !important;
-	margin-left: 0 !important;
+	margin-left: 0 !important;                                       /* callouts NOT indented, unlike blockquotes */
 }
 
-/* Background, remove tint — no !important so themed backgrounds can override */
+/* Background, remove tint */
 .callout {
 	--callout-blend-mode: normal;
 	background-color: var(--background-secondary);
@@ -322,12 +331,8 @@ pre code,
 	color: rgb(var(--callout-color)) !important;
 }
 
-/* Icon inherits title color */
-.callout-title-icon {
-	color: inherit !important;
-}
-
-/* Fold arrow inherits title color */
+/* Icon and fold arrow inherit title color */
+.callout-title-icon,
 .callout-fold {
 	color: inherit !important;
 }
@@ -382,7 +387,6 @@ pre code,
 	--callout-color: 255, 116, 116;    /* red-400 */
 }
 
-/* Quote/cite use a theme-aware color since text-normal differs per theme */
 .theme-dark .callout[data-callout="quote"],
 .theme-dark .callout[data-callout="cite"] {
 	--callout-color: 160, 160, 160;    /* neutral-400 */
@@ -394,7 +398,7 @@ pre code,
 
 /* ─── Callout colored backgrounds ─── */
 
-/* Dark theme */
+/* Dark theme — matches website dark callout backgrounds */
 .theme-dark .callout[data-callout="note"],
 .theme-dark .callout[data-callout="example"] {
 	background-color: #250c3d; /* purple-900 */
@@ -432,8 +436,12 @@ pre code,
 .theme-dark .callout[data-callout="missing"] {
 	background-color: #3d0000; /* red-900 */
 }
+.theme-dark .callout[data-callout="quote"],
+.theme-dark .callout[data-callout="cite"] {
+	background-color: #272727; /* neutral-800 */
+}
 
-/* Light theme */
+/* Light theme — matches website light callout backgrounds */
 .theme-light .callout[data-callout="note"],
 .theme-light .callout[data-callout="example"] {
 	background-color: #f0e2ff; /* purple-100 */
@@ -470,6 +478,10 @@ pre code,
 .theme-light .callout[data-callout="fail"],
 .theme-light .callout[data-callout="missing"] {
 	background-color: #ffe0e0; /* red-100 */
+}
+.theme-light .callout[data-callout="quote"],
+.theme-light .callout[data-callout="cite"] {
+	background-color: #dadada; /* neutral-200 */
 }
 
 /* ─── Links ─── */
